@@ -121,7 +121,7 @@
      model: 'iPhone',
      screensize: 7
  }
- $.get('http://localhost:3000/products', data, function(products) {
+ $.get('http://cafe-api.corentin.codes/products', data, function(products) {
      products.forEach(function (product) {
          console.log(product.brand)
      })
@@ -130,7 +130,7 @@
                  <code class="bash">
  # cURL Example
  curl \
- -X GET http://localhost:3000/products \
+ -X GET http://cafe-api.corentin.codes/products \
  -F 'brand=Apple' \
  -F 'model=iPhone' \
  -F 'screensize=7'
@@ -138,7 +138,7 @@
                  <p>
                      To retrieve products you need to make a GET call to the following URL :
                      <br>
-                     <code class="higlighted">http://localhost:3000/products
+                     <code class="higlighted">http://cafe-api.corentin.codes/products
                      </code>
                  </p>
                  <br>
@@ -235,20 +235,20 @@
                  <pre>
                      <code class="javascript">
  # JavaScript Example  (jQuery is required)
- $.get('http://localhost:3000/products/45', function(product) {
+ $.get('http://cafe-api.corentin.codes/products/45', function(product) {
      console.log(product.brand)
  });
                      </code>
                      <code class="bash">
  # cURL Example
  curl \
- -X GET http://localhost:3000/products/45
+ -X GET http://cafe-api.corentin.codes/products/45
                      </code>
                  </pre>
                  <p>
                      To get a specific product you need to make a GET call to the following URL :
                      <br>
-                     <code class="higlighted">http://localhost:3000/products/{:id}
+                     <code class="higlighted">http://cafe-api.corentin.codes/products/{:id}
                      </code>
                  </p>
                  <p>
@@ -291,7 +291,7 @@
  }
  $.ajax({
      type: "POST",
-     url: "http://localhost:3000",
+     url: "http://cafe-api.corentin.codes",
      data: JSON.stringify(data),
      contentType: "application/json"
  }).done(function(data) {
@@ -302,14 +302,14 @@
                  </code>
                  <code class="bash">
  # cURL Example
- -X POST http://localhost:3000/products \
+ -X POST http://cafe-api.corentin.codes/products \
  -H "Content-Type: application/json"
  -D '{ "brand": "Apple", "model": "iPhone", "os": "iOS 10", "image": "https://i.imgur.com/Xr4H3Hu.png", "screensize": 7}'
                  </code></pre>
                  <p>
                      To create a product you need to make a POST call to the following URL :
                      <br>
-                     <code class="higlighted">http://localhost:3000/products
+                     <code class="higlighted">http://cafe-api.corentin.codes/products
                      </code>
                  </p>
                  <p>
@@ -393,7 +393,7 @@
  }
  $.ajax({
      type: "PUT",
-     url: "http://localhost:3000/products/56",
+     url: "http://cafe-api.corentin.codes/products/56",
      data: JSON.stringify(data),
      contentType: "application/json"
  }).done(function(data) {
@@ -404,14 +404,14 @@
                  </code>
                  <code class="bash">
  # cURL Example
- -X POST http://localhost:3000/products/56 \
+ -X POST http://cafe-api.corentin.codes/products/56 \
  -H "Content-Type: application/json"
  -D '{ "screensize": 7, "brand": "Google" }'
                  </code></pre>
                  <p>
                      To update a product you need to make a PUT call to the following URL :
                      <br>
-                     <code class="higlighted">http://localhost:3000/product/{:id}
+                     <code class="higlighted">http://cafe-api.corentin.codes/product/{:id}
                      </code>
                  </p>
                  <p>
@@ -495,7 +495,7 @@
  # JavaScript Example (jQuery is required)
  $.ajax({
      type: "DELETE",
-     url: "http://localhost:3000/products/65"
+     url: "http://cafe-api.corentin.codes/products/65"
  }).done(function(data) {
      // Successfully deleted product
  }).fail(function(error) {
@@ -505,13 +505,13 @@
                      <code class="bash">
  # cURL Example
  curl \
- -X DELETE http://localhost:3000/products/65
+ -X DELETE http://cafe-api.corentin.codes/products/65
                      </code>
                  </pre>
                  <p>
                      To delete a specific product you need to make a DELETE call to the following URL :
                      <br>
-                     <code class="higlighted">http://localhost:3000/products/{:id}
+                     <code class="higlighted">http://cafe-api.corentin.codes/products/{:id}
                      </code>
                  </p>
                  <p>
