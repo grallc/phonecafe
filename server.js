@@ -10,11 +10,14 @@ app.use(express.static(path.join(__dirname, '/public')))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use('/products', productsRouter)
+app.use(express.static('public'))
+
+app.use('*', express.static('public'))
 
 // Redirect all unmatched paths to documentation
-app.get('*', (req, res) => {
-  res.sendFile('./doc/index.html', { root: __dirname })
-})
+// app.get('*', (req, res) => {
+//   res.sendFile('./index.html', { root: __dirname })
+// })
 
 app.listen(port)
 console.log(`Server is now listening on port ${port}.`)
