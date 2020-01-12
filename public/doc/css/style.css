@@ -1,0 +1,7 @@
+h1, h2 {
+    font-weight: bold;
+}
+
+.scroll-to-link a, .content-section h4 {
+    text-transform: uppercase !important;
+}
