@@ -302,6 +302,7 @@
                  </code>
                  <code class="bash">
  # cURL Example
+ curl \
  -X POST http://cafe-api.corentin.codes/products \
  -H "Content-Type: application/json"
  -D '{ "brand": "Apple", "model": "iPhone", "os": "iOS 10", "image": "https://i.imgur.com/Xr4H3Hu.png", "screensize": 7}'
@@ -404,6 +405,7 @@
                  </code>
                  <code class="bash">
  # cURL Example
+ curl \
  -X POST http://cafe-api.corentin.codes/products/56 \
  -H "Content-Type: application/json"
  -D '{ "screensize": 7, "brand": "Google" }'
