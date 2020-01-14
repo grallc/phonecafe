@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!-- 
+		We started with the Dopetrope Template, that is available here : https://html5up.net/dopetrope
+		
+		Dopetrope by HTML5 UP
+		html5up.net | @ajlkn
+		Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+		We removed and added HTML contents, but we especially cleared the CSS that was really messy.
+
+		Browser compatiblity report at the bottom of this file
+-->
+
+<head>
+	<title>Phonecafé ☕</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+		integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="/store/css/Screen.css" />
+	<link rel="stylesheet" href="/store/css/Print.css" media="print" />
+</head>
+
+<body class="homepage is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html">Phonecafé <span class="logo">&#9749;</span></a></h1>
+
+			<!-- Navbar -->
+			<nav id="nav">
+				<ul>
+					<li><a href="#header">Home</a></li>
+					<li><a href="#best-selling">Top Selling</a></li>
+					<li><a href="#prices">Prices</a></li>
+				</ul>
+			</nav>
+
+			<!-- Banner -->
+			<section id="banner">
+				<header>
+					<h2>Phonecafé <span class="logo">&#9749;</span></h2>
+					<p>Buying your favorite smartphone is now <em>as simple as buying a café</em> <span class="logo">&#9749;</span></p>
+				</header>
+			</section>
+
+			<!-- Intro (Why buy here ?) -->
+			<div id="intro" class="container">
+				<div class="row">
+					<div class="col-lg">
+						<section class="first">
+							<i class="icon solid featured fa-shipping-fast"></i>
+							<header>
+								<pre><strong>Free Next Day Delivery</strong></pre>
+							</header>
+							<h4>Order before 2pm and receive your order the next working day.</h4>
+						</section>
+					</div>
+					<div class="col-lg">
+						<section class="middle">
+							<i class="icon solid featured fa-undo"></i>
+							<header>
+								<pre><strong>Warranty</strong></pre>
+							</header>
+							<h4>12 month warranty and 14 day no quibble returns, we won't ask any questions!</h4>
+						</section>
+					</div>
+					<div class="col-lg">
+						<section class="last">
+							<i class="icon solid featured fa-th-large"></i>
+							<header>
+								<pre><strong>Bulk Discount</strong></pre>
+							</header>
+							<h4>Bulk discount available for businesses, just send us a message!</h4>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+
+						<!-- Best selling products -->
+						<section id="best-selling">
+							<header class="major">
+								<h2>Best selling</h2>
+							</header>
+							<div class="row">
+								<div class="col-12" id="best-selling-table">
+									<form action="http://localhost:3000/products" method="POST" id="product-form" target="_blank">
+										<table id="products-table">
+											<thead>
+												<tr>
+													<th class="sorting-item" id="brand">Brand ▼</th>
+													<th class="sorting-item" id="name">Name ▼</th>
+													<th class="sorting-item" id="os">OS ▼</th>
+													<th class="sorting-item" id="screensize">Screensize ▼</th>
+													<th>Image</th>
+													<th>Actions</th>
+												</tr>
+											</thead>
+											<tbody>
+
+											</tbody>
+											<tfoot>
+												<tr class="table-form">
+													<td><input name="brand" placeholder="VUTech" required></td>
+													<td><input name="model" placeholder="vuPhone 3" required></td>
+													<td>
+														<select name="os" form="product-form" required size="1">
+															<option value="">Select OS</option>
+															<option value="ios13">iOS 13</option>
+															<option value="ios12">iOS 12</option>
+															<option value="ios11">iOS 11</option>
+															<option value="ios9">iOS 9</option>
+															<option value="ios8">iOS 8</option>
+															<option value="ios7">iOS 7</option>
+															<option value="android10">Android 10.0</option>
+															<option value="android9">Android 9.0</option>
+															<option value="android8">Android 8.0</option>
+															<option value="android7">Android 7.0</option>
+															<option value="android6">Android 6.0</option>
+															<option value="android5">Android 5.0</option>
+														</select>
+													</td>
+													<td>
+														<input type="range" name="screensize" min="3" max="8" id="screensize-range" value="5">
+														<span id="screensize-range-value">5"</span>
+													</td>
+													<td><input name="image" placeholder="https://images.google.com/example.png" required></td>
+													<td><input type="submit"></td>
+												</tr>
+											</tfoot>
+										</table>
+									</form>
+								</div>
+							</div>
+						</section>
+
+						<!-- Smartphones prices -->
+						<section id="prices">
+							<div class="row">
+								<div class="col-12" id="prices-table">
+									<table>
+										<caption>
+											<h4>Our prices</h4>
+										</caption>
+										<thead>
+											<tr>
+												<th>Brand</th>
+												<th>Name</th>
+												<th>Quantity</th>
+												<th>Unit Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td rowspan="5">Apple</td>
+												<td rowspan="5">iPhone 11 Pro</td>
+												<td>1</td>
+												<td>999$</td>
+											</tr>
+											<tr>
+												<td>5+</td>
+												<td>950$</td>
+											</tr>
+											<tr>
+												<td>10+</td>
+												<td>900$</td>
+											</tr>
+											<tr>
+												<td>50+</td>
+												<td>800$</td>
+											</tr>
+											<tr>
+												<td>100+</td>
+												<td>750$</td>
+											</tr>
+											<tr>
+												<td rowspan="5">Samsung</td>
+												<td rowspan="5">Galaxy S10+</td>
+												<td>1</td>
+												<td>700$</td>
+											</tr>
+											<tr>
+												<td>5+</td>
+												<td>675$</td>
+											</tr>
+											<tr>
+												<td>10+</td>
+												<td>650$</td>
+											<tr>
+												<td>50+</td>
+												<td>600$</td>
+											</tr>
+											<tr>
+												<td>100+</td>
+												<td>550$</td>
+											</tr>
+											<tr>
+												<td rowspan="5">OnePlus</td>
+												<td rowspan="5">7T Pro</td>
+												<td>1</td>
+												<td>750$</td>
+											</tr>
+											<tr>
+												<td>5+</td>
+												<td>725$</td>
+											</tr>
+											<tr>
+												<td>10+</td>
+												<td>675$</td>
+											</tr>
+											<tr>
+												<td>50+</td>
+												<td>625$</td>
+											</tr>
+											<tr>
+												<td>100+</td>
+												<td>550$</td>
+											</tr>
+											<tr>
+												<td rowspan="5">Google</td>
+												<td rowspan="5">Pixel 4Xl</td>
+												<td>1</td>
+												<td>900$</td>
+											</tr>
+											<tr>
+												<td>5+</td>
+												<td>850$</td>
+											</tr>
+											<tr>
+												<td>10+</td>
+												<td>825$</td>
+											</tr>
+											<tr>
+												<td>50+</td>
+												<td>775$</td>
+											</tr>
+											<tr>
+												<td>100+</td>
+												<td>700$</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<!-- Copyright -->
+						<div id="copyright">
+							<dl class="links">
+								<dt>&copy; Phonecafé. All rights reserved.</dt>
+								<dd>Design: <a href="http://html5up.net">HTML5 UP</a> - Modified by Corentin Grall & Gaia Pantaleo</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- JavaScript Imports -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="/store/js/main.js"></script>
+	<script src="/store/js/jQuery.sortElements.js"></script>
+
+</body>
+
+</html>
+
+<!--
+		The website is fully responsive, which means that we can use the website on all types of screen thanks to the
+		bootstrap framework that helps up to create div and elements which sizes are depending of the screen size.
+		To simulate a mobile/table user :
+			- In Google Chrome : Developer Tools (F12 or Cmd/Ctrl + Shift + I) > "Toggle Device Toolbar" > Chose the device by name or choose "Responsive" for custom sizes
+			- In Mozilla Firefox : Enable Response Design Mode (Cmd/Ctrl + Shift + M) > Chose the device by name or choose "Responsive" for custom sizes
+		
+		In both of these browsers, the websites stills really confortable to use whichever the screensize (laptop/tablet/mobile) : the elements' places are changing
+		depending on the screensize. However, on Chrome, we noticed a problem : the range slider disapears on Chrome Mobile View.
+		This issues is known since 2016 : https://stackoverflow.com/questions/41923891/html-range-input-sliders-disappear-on-mobile-why
+		However, the range sliders appears in both Chrome Mobile Application and Firefox.
+
+		Also, we added the css for printers, that is in `Print.css`.
+		To test it :
+			- In Google Chrome : Developer Tools (F12 or Cmd/Ctrl + Shift + I) > More Tools (In the Three-dots) > Rendering > Emulation = "print"
+			- In Mozilla Firefox : Developer Tools (F12 or Cmd/Ctrl + Shift + I) > Inspector > "Toggle print media simulation"
+
+		In both of these browsers, the `printing` css creates a clear page without any useless image or dark colors (to avoid wasting inks).
+		Forms are also hidden, because we obviously cannot use them with a printer.
+	-->

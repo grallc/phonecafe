@@ -11,8 +11,11 @@ app.use(bodyParser.json())
 app.use('/products', productsRouter)
 app.use(express.static('public'))
 
+// Redirect /doc to the Documentation
+app.use('doc', express.static('public/doc'))
 
-app.use('*', express.static('public'))
+// Redirect all other routes to the store
+app.use('*', express.static('public/store'))
 
 app.listen(port)
 console.log(`Server is now listening on port ${port}.`)

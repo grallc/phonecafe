@@ -1,0 +1,28 @@
+#nav, .icon.featured, caption, #banner h2, .table-form, .logo {
+	display: none;
+}
+
+body, #main, #main .major h2, #banner, #banner header {
+	background: white;
+} 
+
+#banner, #footer {
+	padding: 0;
+}
+
+#copyright dl.links {
+	display: inline;
+	background-color: white;
+}
+
+#main {
+	padding-bottom: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+* {
+	font-weight: normal !important;
+}
