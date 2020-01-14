@@ -312,6 +312,13 @@ button:active,
 	background: #c51349;
 }
 
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+button:disabled,
+.button:disabled {
+	background:#e24665;
+}
+
 /* Links */
 
 dl.links {
