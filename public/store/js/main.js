@@ -39,8 +39,39 @@ function fetchProducts () {
   }, 'json')
 }
 
+function createProduct (data) {
+  $.post('http://localhost:3000/products', data)
+    .done(function () {
+      fetchProducts()
+    })
+    .fail(function (xhr, status, error) {
+      alert(`An error occured : "${error}".`)
+    })
+}
+
 $(document).ready(function () {
   fetchProducts()
+
+  $('<input type="reset" value="Reset database" id="reset"/>').appendTo($('#best-selling'))
+
+  $('#reset').on('click', function () {
+    $.get('http://localhost:3000/products/reset')
+      .done(function () {
+        fetchProducts()
+      })
+      .fail(function (xhr, status, error) {
+        alert(`An error occured : "${error}".`)
+      })
+  })
+
+  $('#product-form').on('submit', function (e) {
+    e.preventDefault()
+    const data = {}
+    $.each($(this).serializeArray(), function (i, field) {
+      data[field.name] = field.value
+    })
+    createProduct(data)
+  })
 
   $('#create-os-input').html(getOsSelect('create-os-input-element'))
 
@@ -106,6 +137,13 @@ $(document).ready(function () {
       data[$(this).attr('name')] = $(this).val()
     })
     data.os = parent.find(`#os-input-${productId}`).val()
+
+    $.ajax({
+      type: 'PUT',
+      url: `http://localhost:3000/products/${productId}`,
+      data: JSON.stringify(data),
+      contentType: 'application/json'
+    }).fail()
 
     $.ajax({
       type: 'PUT',

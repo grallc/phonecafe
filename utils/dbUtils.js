@@ -83,3 +83,14 @@ module.exports.deleteProduct = (params) => {
     })
   })
 }
+
+module.exports.clearProducts = () => {
+  return new Promise((resolve, reject) => {
+    database.run('DELETE FROM products', function (error) {
+      if (error) {
+        reject(error.message)
+      }
+      resolve()
+    })
+  })
+}

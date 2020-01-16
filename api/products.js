@@ -1,10 +1,14 @@
 const express = require('express')
 const productsRouter = express.Router()
-const { getProducts, createProduct, updateProduct, deleteProduct } = require('../utils/dbUtils')
+const { getProducts, createProduct, updateProduct, deleteProduct, clearProducts } = require('../utils/dbUtils')
 
 // GET /products -  Retrieve Products
 productsRouter.get('/:id?', async (req, res) => {
   try {
+    if (req.params.id && req.params.id.toLowerCase() === 'reset') {
+      await clearProducts()
+      return res.sendStatus(204)
+    }
     const products = await getProducts(req.query, req.params.id)
     return res.json(products)
   } catch (error) {
