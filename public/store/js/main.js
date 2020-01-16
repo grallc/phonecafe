@@ -37,6 +37,7 @@ function fetchProducts () {
       ).prependTo('#products-table')
     })
   }, 'json')
+  $('#table-form').find('*').prop('disabled', false)
 }
 
 function createProduct (data) {
