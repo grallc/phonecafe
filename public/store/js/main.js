@@ -84,12 +84,15 @@ $(document).ready(function () {
 
   $(document).on('click', '.delete-action', function () {
     const parent = $(this).parent().parent()
-    $.ajax({ url: `/products/${parent.attr('product-id')}`, method: 'DELETE' })
-      .then(function (data) {
+    $.ajax({
+      url: `/products/${parent.attr('product-id')}`,
+      method: 'DELETE'
+    })
+      .done(function () {
         parent.remove()
       })
-      .catch(function (err) {
-        console.log(err)
+      .fail(function (xhr, status, error) {
+        alert(`An error occured : "${error}".`)
       })
   })
 
