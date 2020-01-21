@@ -5,3 +5,19 @@ h1, h2 {
 .scroll-to-link a, .content-section h4 {
     text-transform: uppercase !important;
 }
+
+code.get-method {
+    color: #3a97d4;
+}
+
+code.post-method {
+    color: #09825d;
+}
+
+code.delete-method {
+    color: #e56f4a;
+}
+
+code.put-method {
+    color: #ff6e00;
+}

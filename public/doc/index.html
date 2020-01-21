@@ -21,7 +21,6 @@
     <link rel="stylesheet"
         href="https://rawgit.com/ticlekiwi/API-Documentation-HTML-Template/master/css/hightlightjs-dark.css">
     <link rel="stylesheet" href="https://rawgit.com/ticlekiwi/API-Documentation-HTML-Template/master/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500%7CSource+Code+Pro:300" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" media="all">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
@@ -66,13 +65,16 @@
             <div class="overflow-hidden content-section" id="content-get-started">
                 <h1 id="get-started">Get started</h1>
                 <pre>
-API Endpoints :
-http://localhost:3000
-or
-http://cafe-api.corentin.codes
             </pre>
                 <p>
                     The Café API allows you to create, update, retrieve and delete products from our webstore - <a href="/">Phonecafé</a>.
+                </p>
+                <p>
+                    <strong>Base URls</strong>
+                    <br>
+                    <code class="higlighted">http://localhost:3000/products</code> (When running on your computer)
+                    <br>
+                    <code class="higlighted">http://cafe-api.corentin.codes/products</code> (From anywhere)
                 </p>
             </div>
 
@@ -151,10 +153,7 @@ http://cafe-api.corentin.codes
  -F 'screensize=7'
                  </code></pre>
                 <p>
-                    To retrieve products you need to make a GET call to the following URL :
-                    <br>
-                    <code class="higlighted">http://localhost:3000/products
-                     </code>
+                    <code class="higlighted get-method">GET</code><code class="higlighted">/</code>
                 </p>
                 <br>
                 <pre><code class="json">
@@ -261,10 +260,9 @@ http://cafe-api.corentin.codes
                      </code>
                  </pre>
                 <p>
-                    To get a specific product you need to make a GET call to the following URL :
-                    <br>
-                    <code class="higlighted">http://localhost:3000/products/{:id}
-                     </code>
+                    <p>
+                        <code class="higlighted get-method">GET</code><code class="higlighted">/{:id}</code>
+                    </p>
                 </p>
                 <p>
                     <strong>Provided ID must a valid Integer.</strong> If whether it's not or no product belongs to this
@@ -324,10 +322,7 @@ http://cafe-api.corentin.codes
  -D '{ "brand": "Apple", "model": "iPhone", "os": "iOS 10", "image": "https://i.imgur.com/Xr4H3Hu.png", "screensize": 7}'
                  </code></pre>
                 <p>
-                    To create a product you need to make a POST call to the following URL :
-                    <br>
-                    <code class="higlighted">http://localhost:3000/products
-                     </code>
+                    <code class="higlighted post-method">POST</code><code class="higlighted">/</code>
                 </p>
                 <p>
                     <strong>The following parameters must be provided by JSON-Encoded data.</strong>
@@ -427,10 +422,7 @@ http://cafe-api.corentin.codes
  -D '{ "screensize": 7, "brand": "Google" }'
                  </code></pre>
                 <p>
-                    To update a product you need to make a PUT call to the following URL :
-                    <br>
-                    <code class="higlighted">http://localhost:3000/product/{:id}
-                     </code>
+                    <code class="higlighted put-method">PUT</code><code class="higlighted">/{:id}</code>
                 </p>
                 <p>
                     <strong>The following parameters must be provided by JSON-Encoded data.</strong> You can chose which
@@ -529,10 +521,7 @@ http://cafe-api.corentin.codes
                      </code>
                  </pre>
                 <p>
-                    To delete a specific product you need to make a DELETE call to the following URL :
-                    <br>
-                    <code class="higlighted">http://localhost:3000/products/{:id}
-                     </code>
+                    <code class="higlighted delete-method">DELETE</code><code class="higlighted">/{:id}</code>
                 </p>
                 <p>
                     <strong>Provided ID must a valid Integer.</strong> If it's not, an error will happen.
