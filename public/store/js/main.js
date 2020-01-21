@@ -110,10 +110,10 @@ $(document).ready(function () {
     })
 
     const brand = parent.find('.brand-edit')
-    brand.html(`<input name="brand" value="${$(brand).html()}" />`)
+    brand.html(`<input name="brand" type="string" value="${$(brand).html()}" />`)
 
     const model = parent.find('.model-edit')
-    model.html(`<input name="model" value="${$(model).html()}" />`)
+    model.html(`<input name="model" type="string" value="${$(model).html()}" />`)
 
     const os = parent.find('.os-edit')
     const osValue = os.html()
@@ -121,7 +121,7 @@ $(document).ready(function () {
     $(`#os-input-${productId}`).val(osValue)
 
     const image = parent.find('.img-edit:first-child')
-    image.parent().html(`<input value="${$(image).attr('src')}" name="image" />`)
+    image.parent().html(`<input value="${$(image).attr('src')}" type="url" name="image" />`)
 
     const screensize = parent.find('.screensize-value:first-child')
     const range = $($.parseHTML(
