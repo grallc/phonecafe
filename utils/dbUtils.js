@@ -6,23 +6,33 @@ module.exports.getProducts = (filters, productId) => {
     let formattedFilters = 'WHERE '
     let filtersCount = 0
     if (productId) {
-      filtersCount++
-      formattedFilters += `id = ${productId}`
-    } else {
-      for (const key in filters) {
-        if (isValidField(key)) {
-          formattedFilters += `${filtersCount !== 0 ? ' AND ' : ''}`
-          formattedFilters += `${key} = ${key === 'screensize' ? filters[key] : `'${filters[key]}'`}`
-          filtersCount++
+      database.all('SELECT * FROM products WHERE id = ?', [productId], (error, rows) => {
+        if (error) {
+          reject(error.message)
         }
+        // If rows were found, return the first one.
+        // Otherwise, return an empty object.
+        resolve(rows.length > 0 ? rows[0] : { })
+      })
+    }
+    // Convert all filters and fields into a string
+    for (const key in filters) {
+      // Check if whether or not the provided field is an existing one
+      if (isValidField(key)) {
+        formattedFilters += `${filtersCount !== 0 ? ' AND ' : ''}`
+        formattedFilters += `${key} = ${key === 'screensize' ? filters[key] : `'${filters[key]}'`}`
+        filtersCount++
       }
     }
+
+    // Build the SQL request using the previously built string
     database.all(`SELECT * FROM products ${filtersCount > 0 ? formattedFilters : ''}`, (error, rows) => {
       if (error) {
         reject(error.message)
       }
       resolve(rows)
     })
+
   })
 }
 
