@@ -7,63 +7,78 @@
  We started this Documentation using this open-sources one.
  We off course changed its content to our's API Documentation.
  !-->
- <!DOCTYPE html>
- <html class="no-js" lang="en">
- 
- <head>
-     <meta charset="utf-8">
-     <title>API - Documentation</title>
-     <meta name="description" content="">
-     <meta name="author" content="ticlekiwi">
- 
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-     <link rel="stylesheet" href="https://rawgit.com/ticlekiwi/API-Documentation-HTML-Template/master/css/hightlightjs-dark.css">
-     <link rel="stylesheet" href="https://rawgit.com/ticlekiwi/API-Documentation-HTML-Template/master/css/style.css">
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
-     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500%7CSource+Code+Pro:300" rel="stylesheet">
-     <link rel="stylesheet" href="css/style.css" media="all">
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
-     <script>
-         hljs.initHighlightingOnLoad();
-     </script>
- </head>
- 
- <body>
-     <div class="left-menu">
-         <div class="content-logo">
-             <span>☕ API Documentation</span>
-         </div>
-         <div class="content-menu">
-             <ul>
-                 <li class="scroll-to-link" data-target="product-object">
-                     <a>The Product Object</a>
-                 </li>
-                 <li class="scroll-to-link" data-target="get-products">
-                     <a>Retrieve Products</a>
-                 </li>
-                 <li class="scroll-to-link" data-target="get-product">
-                     <a>Retrieve Product</a>
-                 </li>
-                 <li class="scroll-to-link" data-target="create-product">
-                     <a>Create Product</a>
-                 </li>
-                 <li class="scroll-to-link" data-target="update-product">
-                     <a>Update Product</a>
-                 </li>
-                 <li class="scroll-to-link" data-target="delete-product">
-                     <a>Delete Product</a>
-                 </li>
-             </ul>
-         </div>
-     </div>
-     <div class="content-page">
-         <div class="content-code"></div>
-         <div class="content">
- 
-             <div class="overflow-hidden content-section">
-                 <h2 id="product-object">The Product Object</h2>
-                 <pre><code class="json">
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>API - Documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="ticlekiwi">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+        href="https://rawgit.com/ticlekiwi/API-Documentation-HTML-Template/master/css/hightlightjs-dark.css">
+    <link rel="stylesheet" href="https://rawgit.com/ticlekiwi/API-Documentation-HTML-Template/master/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500%7CSource+Code+Pro:300" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body>
+    <div class="left-menu">
+        <div class="content-logo">
+            <span>☕ API Documentation</span>
+        </div>
+        <div class="content-menu">
+            <ul>
+                <li class="scroll-to-link" data-target="get-started">
+                    <a>Get Started</a>
+                </li>
+                <li class="scroll-to-link" data-target="product-object">
+                    <a>The Product Object</a>
+                </li>
+                <li class="scroll-to-link" data-target="get-products">
+                    <a>Retrieve Products</a>
+                </li>
+                <li class="scroll-to-link" data-target="get-product">
+                    <a>Retrieve Product</a>
+                </li>
+                <li class="scroll-to-link" data-target="create-product">
+                    <a>Create Product</a>
+                </li>
+                <li class="scroll-to-link" data-target="update-product">
+                    <a>Update Product</a>
+                </li>
+                <li class="scroll-to-link" data-target="delete-product">
+                    <a>Delete Product</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-page">
+        <div class="content">
+            <div class="overflow-hidden content-section" id="content-get-started">
+                <h1 id="get-started">Get started</h1>
+                <pre>
+API Endpoints :
+http://localhost:3000
+or
+http://cafe-api.corentin.codes
+            </pre>
+                <p>
+                    The Café API allows you to create, update, retrieve and delete products from our webstore - <a href="/">Phonecafé</a>.
+                </p>
+            </div>
+
+            <div class="overflow-hidden content-section">
+                <h2 id="product-object">The Product Object</h2>
+                <pre><code class="json">
  # Example Product
  {
      "id": 17940,
@@ -74,54 +89,54 @@
      "screensize": 5
  }
                  </code></pre>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Field</th>
-                             <th>Type</th>
-                             <th>Description</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>brand</td>
-                             <td>String</td>
-                             <td>Product's brand</td>
-                         </tr>
-                         <tr>
-                             <td>model</td>
-                             <td>String</td>
-                             <td>Product's model name</td>
-                         </tr>
-                         <tr>
-                             <td>os</td>
-                             <td>String</td>
-                             <td>Product's Operating System</td>
-                         </tr>
-                         <tr>
-                             <td>screensize</td>
-                             <td>Integer</td>
-                             <td>Product's Screen Size</td>
-                         </tr>
-                         <tr>
-                             <td>image</td>
-                             <td>String</td>
-                             <td>Image of the product</td>
-                         </tr>
-                     </tbody>
-                 </table>
-             </div>
- 
-             <div class="overflow-hidden content-section">
-                 <h2 id="get-products">Retrieve Products</h2>
-                 <pre><code class="javascript">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>brand</td>
+                            <td>String</td>
+                            <td>Product's brand</td>
+                        </tr>
+                        <tr>
+                            <td>model</td>
+                            <td>String</td>
+                            <td>Product's model name</td>
+                        </tr>
+                        <tr>
+                            <td>os</td>
+                            <td>String</td>
+                            <td>Product's Operating System</td>
+                        </tr>
+                        <tr>
+                            <td>screensize</td>
+                            <td>Integer</td>
+                            <td>Product's Screen Size</td>
+                        </tr>
+                        <tr>
+                            <td>image</td>
+                            <td>String</td>
+                            <td>Image of the product</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="overflow-hidden content-section">
+                <h2 id="get-products">Retrieve Products</h2>
+                <pre><code class="javascript">
  # JavaScript Example (jQuery is required)
  const data = {
      brand: 'Apple',
      model: 'iPhone',
      screensize: 7
  }
- $.get('http://cafe-api.corentin.codes/products', data, function(products) {
+ $.get('http://localhost:3000/products', data, function(products) {
      products.forEach(function (product) {
          console.log(product.brand)
      })
@@ -130,19 +145,19 @@
                  <code class="bash">
  # cURL Example
  curl \
- -X GET http://cafe-api.corentin.codes/products \
+ -X GET http://localhost:3000/products \
  -F 'brand=Apple' \
  -F 'model=iPhone' \
  -F 'screensize=7'
                  </code></pre>
-                 <p>
-                     To retrieve products you need to make a GET call to the following URL :
-                     <br>
-                     <code class="higlighted">http://cafe-api.corentin.codes/products
+                <p>
+                    To retrieve products you need to make a GET call to the following URL :
+                    <br>
+                    <code class="higlighted">http://localhost:3000/products
                      </code>
-                 </p>
-                 <br>
-                 <pre><code class="json">
+                </p>
+                <br>
+                <pre><code class="json">
  # Result example
  [
      {
@@ -163,126 +178,127 @@
      },
  ]
                  </code></pre>
-                 <h4>Query Parameters</h4>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Field</th>
-                             <th>Type</th>
-                             <th>Required</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>brand</td>
-                             <td>String</td>
-                             <td>Optional</td>
-                         </tr>
-                         <tr>
-                             <td>model</td>
-                             <td>String</td>
-                             <td>Optional</td>
-                         </tr>
-                         <tr>
-                             <td>os</td>
-                             <td>String</td>
-                             <td>Optional</td>
-                         </tr>
-                         <tr>
-                             <td>screensize</td>
-                             <td>Integer</td>
-                             <td>Optional</td>
-                         </tr>
-                         <tr>
-                             <td>image</td>
-                             <td>String</td>
-                             <td>Optional</td>
-                         </tr>
-                     </tbody>
-                 </table>
-                 <p>
-                     <strong>If no query are specified, all products will be returned.</strong>
-                 </p>
- 
-                 <br>
-                 <h4>Returned HTTP Codes</h4>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Code</th>
-                             <th>Meaning</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>200</td>
-                             <td>
-                                 The request has succeed. Please notice that the data can be empty.
-                             </td>
-                         </tr>
-                         <tr>
-                             <td>500</td>
-                             <td>
-                                 An Error occured. It mainly occurs when some parameters are missing or incorrect.
-                             </td>
-                         </tr>
-                     </tbody>
-                 </table>
-             </div>
- 
-             <div class="overflow-hidden content-section">
-                 <h2 id="get-product">Retrieve Product</h2>
-                 <pre>
+                <h4>Query Parameters</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>brand</td>
+                            <td>String</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td>model</td>
+                            <td>String</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td>os</td>
+                            <td>String</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td>screensize</td>
+                            <td>Integer</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td>image</td>
+                            <td>String</td>
+                            <td>Optional</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <strong>If no query are specified, all products will be returned.</strong>
+                </p>
+
+                <br>
+                <h4>Returned HTTP Codes</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>200</td>
+                            <td>
+                                The request has succeed. Please notice that the data can be empty.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>500</td>
+                            <td>
+                                An Error occured. It mainly occurs when some parameters are missing or incorrect.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="overflow-hidden content-section">
+                <h2 id="get-product">Retrieve Product</h2>
+                <pre>
                      <code class="javascript">
  # JavaScript Example  (jQuery is required)
- $.get('http://cafe-api.corentin.codes/products/45', function(product) {
+ $.get('http://localhost:3000/products/45', function(product) {
      console.log(product.brand)
  });
                      </code>
                      <code class="bash">
  # cURL Example
  curl \
- -X GET http://cafe-api.corentin.codes/products/45
+ -X GET http://localhost:3000/products/45
                      </code>
                  </pre>
-                 <p>
-                     To get a specific product you need to make a GET call to the following URL :
-                     <br>
-                     <code class="higlighted">http://cafe-api.corentin.codes/products/{:id}
+                <p>
+                    To get a specific product you need to make a GET call to the following URL :
+                    <br>
+                    <code class="higlighted">http://localhost:3000/products/{:id}
                      </code>
-                 </p>
-                 <p>
-                     <strong>Provided ID must a valid Integer.</strong> If whether it's not or no product belongs to this ID, nothing will be returned.
-                 </p>
- 
-                 <h4>Returned HTTP Codes</h4>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Code</th>
-                             <th>Meaning</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>200</td>
-                             <td>
-                                 The request has succeed. Please notice that the data can be empty.
-                             </td>
-                         </tr>
-                         <tr>
-                             <td>500</td>
-                             <td>
-                                 An Error occured. It mainly occurs when some parameters are missing or incorrect.
-                             </td>
-                         </tr>
-                     </tbody>
-                 </table>
-             </div>
- 
-             <div class="overflow-hidden content-section">
-                 <h2 id="create-product">Create Product</h2>
-                 <pre><code class="javascript">
+                </p>
+                <p>
+                    <strong>Provided ID must a valid Integer.</strong> If whether it's not or no product belongs to this
+                    ID, nothing will be returned.
+                </p>
+
+                <h4>Returned HTTP Codes</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>200</td>
+                            <td>
+                                The request has succeed. Please notice that the data can be empty.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>500</td>
+                            <td>
+                                An Error occured. It mainly occurs when some parameters are missing or incorrect.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="overflow-hidden content-section">
+                <h2 id="create-product">Create Product</h2>
+                <pre><code class="javascript">
  # JavaScript Example (jQuery is required)
  const data = {
      brand: 'Apple',
@@ -291,7 +307,7 @@
  }
  $.ajax({
      type: "POST",
-     url: "http://cafe-api.corentin.codes/products",
+     url: "http://localhost:3000/products",
      data: JSON.stringify(data),
      contentType: "application/json"
  }).done(function(data) {
@@ -303,90 +319,90 @@
                  <code class="bash">
  # cURL Example
  curl \
- -X POST http://cafe-api.corentin.codes/products \
+ -X POST http://localhost:3000/products \
  -H "Content-Type: application/json"
  -D '{ "brand": "Apple", "model": "iPhone", "os": "iOS 10", "image": "https://i.imgur.com/Xr4H3Hu.png", "screensize": 7}'
                  </code></pre>
-                 <p>
-                     To create a product you need to make a POST call to the following URL :
-                     <br>
-                     <code class="higlighted">http://cafe-api.corentin.codes/products
+                <p>
+                    To create a product you need to make a POST call to the following URL :
+                    <br>
+                    <code class="higlighted">http://localhost:3000/products
                      </code>
-                 </p>
-                 <p>
-                     <strong>The following parameters must be provided by JSON-Encoded data.</strong>
-                 </p>
-                 <br>
-                 <h4>Body Parameters</h4>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Field</th>
-                             <th>Type</th>
-                             <th>Required</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>brand</td>
-                             <td>String</td>
-                             <td>Required</td>
-                         </tr>
-                         <tr>
-                             <td>model</td>
-                             <td>String</td>
-                             <td>Required</td>
-                         </tr>
-                         <tr>
-                             <td>os</td>
-                             <td>String</td>
-                             <td>Required</td>
-                         </tr>
-                         <tr>
-                             <td>screensize</td>
-                             <td>Integer</td>
-                             <td>Required</td>
-                         </tr>
-                         <tr>
-                             <td>image</td>
-                             <td>String</td>
-                             <td>Required</td>
-                         </tr>
-                     </tbody>
-                 </table>
-                 <p>
-                     <strong>If no query are specified, all products will be returned.</strong>
-                 </p>
- 
-                 <br>
-                 <h4>Returned HTTP Codes</h4>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Code</th>
-                             <th>Meaning</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>201</td>
-                             <td>
-                                 The Product has been created.
-                             </td>
-                         </tr>
-                         <tr>
-                             <td>500</td>
-                             <td>
-                                 An Error occured. It mainly occurs when some parameters are missing or incorrect.
-                             </td>
-                         </tr>
-                     </tbody>
-                 </table>
-             </div>
- 
-             <div class="overflow-hidden content-section">
-                 <h2 id="update-product">Update Product</h2>
-                 <pre><code class="javascript">
+                </p>
+                <p>
+                    <strong>The following parameters must be provided by JSON-Encoded data.</strong>
+                </p>
+                <br>
+                <h4>Body Parameters</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>brand</td>
+                            <td>String</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td>model</td>
+                            <td>String</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td>os</td>
+                            <td>String</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td>screensize</td>
+                            <td>Integer</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td>image</td>
+                            <td>String</td>
+                            <td>Required</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <strong>If no query are specified, all products will be returned.</strong>
+                </p>
+
+                <br>
+                <h4>Returned HTTP Codes</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>201</td>
+                            <td>
+                                The Product has been created.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>500</td>
+                            <td>
+                                An Error occured. It mainly occurs when some parameters are missing or incorrect.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="overflow-hidden content-section">
+                <h2 id="update-product">Update Product</h2>
+                <pre><code class="javascript">
  # JavaScript Example (jQuery is required)
  const data = {
      screensize: 8,
@@ -394,7 +410,7 @@
  }
  $.ajax({
      type: "PUT",
-     url: "http://cafe-api.corentin.codes/products/56",
+     url: "http://localhost:3000/products/56",
      data: JSON.stringify(data),
      contentType: "application/json"
  }).done(function(data) {
@@ -406,98 +422,100 @@
                  <code class="bash">
  # cURL Example
  curl \
- -X POST http://cafe-api.corentin.codes/products/56 \
+ -X POST http://localhost:3000/products/56 \
  -H "Content-Type: application/json"
  -D '{ "screensize": 7, "brand": "Google" }'
                  </code></pre>
-                 <p>
-                     To update a product you need to make a PUT call to the following URL :
-                     <br>
-                     <code class="higlighted">http://cafe-api.corentin.codes/product/{:id}
+                <p>
+                    To update a product you need to make a PUT call to the following URL :
+                    <br>
+                    <code class="higlighted">http://localhost:3000/product/{:id}
                      </code>
-                 </p>
-                 <p>
-                     <strong>The following parameters must be provided by JSON-Encoded data.</strong> You can chose which of them by providing only the ones that you want to update.
-                 </p>
-                 <p>
-                     The example request only updates the fields `screensize` and `brand`.
-                 </p>
-                 <br>
-                 <h4>Body Parameters</h4>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Field</th>
-                             <th>Type</th>
-                             <th>Required</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>brand</td>
-                             <td>String</td>
-                             <td>Optional</td>
-                         </tr>
-                         <tr>
-                             <td>model</td>
-                             <td>String</td>
-                             <td>Optional</td>
-                         </tr>
-                         <tr>
-                             <td>os</td>
-                             <td>String</td>
-                             <td>Optional</td>
-                         </tr>
-                         <tr>
-                             <td>screensize</td>
-                             <td>Integer</td>
-                             <td>Optional</td>
-                         </tr>
-                         <tr>
-                             <td>image</td>
-                             <td>String</td>
-                             <td>Optional</td>
-                         </tr>
-                     </tbody>
-                 </table>
-                 <p>
-                     <strong>If no query are specified, the product will not be updated</strong>
-                 </p>
- 
-                 <br>
-                 <h4>Returned HTTP Codes</h4>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Code</th>
-                             <th>Meaning</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>201</td>
-                             <td>
-                                 The Product has been created. Please notice that the request will return 201 even if no products were found.
-                             </td>
-                         </tr>
-                         <tr>
-                             <td>500</td>
-                             <td>
-                                 An Error occured. It mainly occurs when some parameters are incorrect.
-                             </td>
-                         </tr>
-                     </tbody>
-                 </table>
-             </div>
- 
-             <div class="overflow-hidden content-section">
-                 <h2 id="delete-product">Delete Product</h2>
-                 <pre>
+                </p>
+                <p>
+                    <strong>The following parameters must be provided by JSON-Encoded data.</strong> You can chose which
+                    of them by providing only the ones that you want to update.
+                </p>
+                <p>
+                    The example request only updates the fields `screensize` and `brand`.
+                </p>
+                <br>
+                <h4>Body Parameters</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>brand</td>
+                            <td>String</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td>model</td>
+                            <td>String</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td>os</td>
+                            <td>String</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td>screensize</td>
+                            <td>Integer</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td>image</td>
+                            <td>String</td>
+                            <td>Optional</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <strong>If no query are specified, the product will not be updated</strong>
+                </p>
+
+                <br>
+                <h4>Returned HTTP Codes</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>201</td>
+                            <td>
+                                The Product has been created. Please notice that the request will return 201 even if no
+                                products were found.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>500</td>
+                            <td>
+                                An Error occured. It mainly occurs when some parameters are incorrect.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="overflow-hidden content-section">
+                <h2 id="delete-product">Delete Product</h2>
+                <pre>
                      <code class="javascript">
  # JavaScript Example (jQuery is required)
  $.ajax({
      type: "DELETE",
-     url: "http://cafe-api.corentin.codes/products/65"
+     url: "http://localhost:3000/products/65"
  }).done(function(data) {
      // Successfully deleted product
  }).fail(function(error) {
@@ -507,49 +525,50 @@
                      <code class="bash">
  # cURL Example
  curl \
- -X DELETE http://cafe-api.corentin.codes/products/65
+ -X DELETE http://localhost:3000/products/65
                      </code>
                  </pre>
-                 <p>
-                     To delete a specific product you need to make a DELETE call to the following URL :
-                     <br>
-                     <code class="higlighted">http://cafe-api.corentin.codes/products/{:id}
+                <p>
+                    To delete a specific product you need to make a DELETE call to the following URL :
+                    <br>
+                    <code class="higlighted">http://localhost:3000/products/{:id}
                      </code>
-                 </p>
-                 <p>
-                     <strong>Provided ID must a valid Integer.</strong> If it's not, an error will happen.
-                 </p>
- 
-                 <h4>Returned HTTP Codes</h4>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Code</th>
-                             <th>Meaning</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>201</td>
-                             <td>
-                                 The request has succeed. Please notice that the request will return 201 even if no products were found.
-                             </td>
-                         </tr>
-                         <tr>
-                             <td>500</td>
-                             <td>
-                                 An Error occured. It mainly occurs when the provided ID was incorrect.
-                             </td>
-                         </tr>
-                     </tbody>
-                 </table>
-             </div>
- 
-         </div>
-         <div class="content-code"></div>
-     </div>
-     <script src="https://rawgit.com/ticlekiwi/API-Documentation-HTML-Template/master/js/libs/jquery.js"></script>
-     <script src="https://rawgit.com/ticlekiwi/API-Documentation-HTML-Template/master/js/script.js"></script>
- </body>
- 
- </html>
+                </p>
+                <p>
+                    <strong>Provided ID must a valid Integer.</strong> If it's not, an error will happen.
+                </p>
+
+                <h4>Returned HTTP Codes</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>201</td>
+                            <td>
+                                The request has succeed. Please notice that the request will return 201 even if no
+                                products were found.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>500</td>
+                            <td>
+                                An Error occured. It mainly occurs when the provided ID was incorrect.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="content-code"></div>
+    </div>
+    <script src="https://rawgit.com/ticlekiwi/API-Documentation-HTML-Template/master/js/libs/jquery.js"></script>
+    <script src="https://rawgit.com/ticlekiwi/API-Documentation-HTML-Template/master/js/script.js"></script>
+</body>
+
+</html>
