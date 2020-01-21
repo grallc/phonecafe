@@ -33,7 +33,10 @@ productsRouter.post('/', async (req, res) => {
 // Update Products
 productsRouter.put('/:id?', async (req, res) => {
   try {
-    await updateProduct(req.params, req.body)
+    const updated = await updateProduct(req.params, req.body)
+    if (updated === 0) {
+      return res.status(404).json({ error: 'Product not found' })
+    }
     return res.sendStatus(204)
   } catch (error) {
     return res.status(500).json({
@@ -45,7 +48,10 @@ productsRouter.put('/:id?', async (req, res) => {
 // Delete Products
 productsRouter.delete('/:id?', async (req, res) => {
   try {
-    await deleteProduct(req.params)
+    const deleted = await deleteProduct(req.params)
+    if (deleted === 0) {
+      return res.status(404).json({ error: 'Product not found' })
+    }
     return res.sendStatus(204)
   } catch (error) {
     return res.status(500).json({
