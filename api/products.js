@@ -5,7 +5,9 @@ const { getProducts, createProduct, updateProduct, deleteProduct, clearProducts 
 // GET /products -  Retrieve Products
 productsRouter.get('/:id?', async (req, res) => {
   try {
+    // Is the provided parameters `reset` ?
     if (req.params.id && req.params.id.toLowerCase() === 'reset') {
+      // It is. Clear the database.
       await clearProducts()
       return res.sendStatus(204)
     }

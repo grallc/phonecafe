@@ -39,6 +39,7 @@ module.exports.getProducts = (filters, productId) => {
 module.exports.createProduct = (body = {}) => {
   return new Promise((resolve, reject) => {
     const checkedInput = isValidInput(body)
+    // Is the Input valid ?
     if (!checkedInput.isValid) {
       reject(checkedInput.error)
     }
@@ -53,10 +54,12 @@ module.exports.createProduct = (body = {}) => {
 
 module.exports.updateProduct = (params = {}, body = {}) => {
   return new Promise((resolve, reject) => {
+    // Missing ID
     if (!params.id) {
       reject(new Error('Please provide a valid Product ID'))
     }
     let formattedUpdates = ''
+    // Update provided fields.
     for (const key in body) {
       if (isValidField(key)) {
         formattedUpdates += `${key} = ${key === 'screensize' ? body[key] : `'${body[key]}'`}, `
